@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<title>SH73 Routing</title>
+
+<style>
+
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial;
+}
+
+#controls{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:999;
+    background:white;
+    padding:10px;
+    border:1px solid #888;
+    width:280px;
+    max-height:95vh;
+    overflow:auto;
+}
+
+input[type=range]{
+    width:240px;
+}
+
+canvas{
+    display:block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="controls">
+
+<h3>Route Controls</h3>
+
+<label>Start Node</label><br>
+<select id="startNode"></select>
+
+<br><br>
+
+<label>End Node</label><br>
+<select id="endNode"></select>
+
+<hr>
+
+<h3>Constraint Weights</h3>
+
+<div id="weights"></div>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+<canvas id="canvas"></canvas>
+
+<script src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
