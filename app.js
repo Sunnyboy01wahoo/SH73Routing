@@ -81,7 +81,10 @@ function buildSliders()
         const label =
             document.createElement("label");
 
-        label.innerText = c;
+        label.innerText =
+    c.charAt(0).toUpperCase()
+    +
+    c.slice(1);
 
         const slider =
             document.createElement("input");
@@ -98,17 +101,26 @@ function buildSliders()
         value.id =
             c + "Value";
 
-        value.innerText = "1";
+        value.innerText = "x1";
 
         weightsDiv.appendChild(label);
-        weightsDiv.appendChild(document.createElement("br"));
 
-        weightsDiv.appendChild(slider);
-        weightsDiv.appendChild(value);
+const spacer =
+    document.createElement("span");
 
-        weightsDiv.appendChild(document.createElement("br"));
-        weightsDiv.appendChild(document.createElement("br"));
+spacer.innerHTML =
+    "&nbsp;&nbsp;";
 
+weightsDiv.appendChild(spacer);
+
+weightsDiv.appendChild(value);
+
+weightsDiv.appendChild(document.createElement("br"));
+
+weightsDiv.appendChild(slider);
+
+weightsDiv.appendChild(document.createElement("br"));
+weightsDiv.appendChild(document.createElement("br"));
     });
 }
 
@@ -630,7 +642,8 @@ if(basemap.complete)
                 )
                 {
                     label.innerText =
-                        slider.value;
+    "x" +
+    slider.value;
                 }
 
             });
