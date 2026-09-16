@@ -78,22 +78,29 @@ function buildSliders()
 {
     constraints.forEach(c => {
 
+        const row =
+            document.createElement("div");
+
+        row.style.display =
+            "flex";
+
+        row.style.justifyContent =
+            "space-between";
+
+        row.style.alignItems =
+            "center";
+
+        row.style.marginBottom =
+            "4px";
+
         const label =
             document.createElement("label");
 
         label.innerText =
-    c.charAt(0).toUpperCase()
-    +
-    c.slice(1);
-
-        const slider =
-            document.createElement("input");
-
-        slider.type = "range";
-        slider.min = 0;
-        slider.max = 10;
-        slider.value = 1;
-        slider.id = c;
+            c.charAt(0)
+                .toUpperCase()
+            +
+            c.slice(1);
 
         const value =
             document.createElement("span");
@@ -101,31 +108,51 @@ function buildSliders()
         value.id =
             c + "Value";
 
-        value.innerText = "x1";
+        value.innerText =
+            "x1";
 
-        weightsDiv.appendChild(label);
+        row.appendChild(
+            label
+        );
 
-const spacer =
-    document.createElement("span");
+        row.appendChild(
+            value
+        );
 
-spacer.innerHTML =
-    "&nbsp;&nbsp;";
+        const slider =
+            document.createElement("input");
 
-weightsDiv.appendChild(spacer);
+        slider.type =
+            "range";
 
-weightsDiv.appendChild(value);
+        slider.min =
+            0;
 
-weightsDiv.appendChild(document.createElement("br"));
+        slider.max =
+            10;
 
-weightsDiv.appendChild(slider);
+        slider.value =
+            1;
 
-weightsDiv.appendChild(document.createElement("br"));
-weightsDiv.appendChild(document.createElement("br"));
+        slider.id =
+            c;
+
+        weightsDiv.appendChild(
+            row
+        );
+
+        weightsDiv.appendChild(
+            slider
+        );
+
+        weightsDiv.appendChild(
+            document.createElement("br")
+        );
+
     });
 }
 
 buildSliders();
-
 // =====================================================
 // MAP EXTENT
 // =====================================================
