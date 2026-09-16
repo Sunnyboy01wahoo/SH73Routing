@@ -473,10 +473,10 @@ function dijkstra(
 // =====================================================
 
 Promise.all([
-    fetch("data/sh73.json")
+    fetch("sh73.json")
         .then(r => r.json()),
 
-    fetch("data/locations.json")
+    fetch("locations.json")
         .then(r => r.json())
 ])
 
