@@ -43,21 +43,11 @@ basemap.src =
 // CANVAS
 // =====================================================
 
-function resizeCanvas()
-{
-    canvas.width =
-        window.innerWidth;
+canvas.width =
+    window.innerWidth;
 
-    canvas.height =
-        window.innerHeight;
-}
-
-resizeCanvas();
-
-window.addEventListener(
-    "resize",
-    resizeCanvas
-);
+canvas.height =
+    window.innerHeight;
 
 // =====================================================
 // CONSTRAINTS
