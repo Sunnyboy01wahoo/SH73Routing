@@ -1028,7 +1028,10 @@ if(
         }
     }
 
-    draw();
+    enableRouting.checked =
+    false;
+
+draw();
 
     startNode.addEventListener(
     "change",
