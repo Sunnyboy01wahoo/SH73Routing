@@ -43,11 +43,14 @@ basemap.src =
 // CANVAS
 // =====================================================
 
-canvas.width =
-    window.innerWidth;
-
-canvas.height =
-    window.innerHeight;
+window.addEventListener(
+    "resize",
+    () =>
+    {
+        resizeCanvas();
+        draw();
+    }
+);
 
 // =====================================================
 // CONSTRAINTS
