@@ -1031,14 +1031,19 @@ if(
     draw();
 
     startNode.addEventListener(
-        "change",
-        draw
-    );
+    "change",
+    draw
+);
 
-    endNode.addEventListener(
-        "change",
-        draw
-    );
+endNode.addEventListener(
+    "change",
+    draw
+);
+
+enableRouting.addEventListener(
+    "change",
+    draw
+);
 
     constraints.forEach(c => {
 
