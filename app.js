@@ -18,6 +18,10 @@ const startNode =
 
 const endNode =
     document.getElementById("endNode");
+const enableRouting =
+    document.getElementById(
+        "enableRouting"
+    );
 
 const weightsDiv =
     document.getElementById("weights");
