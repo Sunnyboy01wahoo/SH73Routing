@@ -864,7 +864,10 @@ if(route.length === 0)
     );
 }
 
-if(route.length > 0)
+if(
+    enableRouting.checked &&
+    route.length > 0
+)
 {
     ctx.beginPath();
 
