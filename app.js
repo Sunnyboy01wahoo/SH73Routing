@@ -926,54 +926,52 @@ if(
             // MARKERS
             // =========================================
 
-            const startPt =
-                project(
-                    startHex.cx,
-                    startHex.cy
-                );
+            if(
+    enableRouting.checked
+)
+{
+    const startPt =
+        project(
+            startHex.cx,
+            startHex.cy
+        );
 
-            const endPt =
-                project(
-                    endHex.cx,
-                    endHex.cy
-                );
+    const endPt =
+        project(
+            endHex.cx,
+            endHex.cy
+        );
 
-            ctx.beginPath();
+    ctx.beginPath();
 
-            ctx.arc(
-                startPt[0],
-                startPt[1],
-                12,
-                0,
-                Math.PI * 2
-            );
+    ctx.arc(
+        startPt[0],
+        startPt[1],
+        12,
+        0,
+        Math.PI * 2
+    );
 
-            ctx.fillStyle =
-                "lime";
+    ctx.fillStyle =
+        "lime";
 
-            ctx.fill();
-ctx.strokeStyle =
-    "rgba(0,0,0,0.12)";
+    ctx.fill();
 
-ctx.lineWidth =
-    0.5;
+    ctx.beginPath();
 
-ctx.stroke();
+    ctx.arc(
+        endPt[0],
+        endPt[1],
+        12,
+        0,
+        Math.PI * 2
+    );
 
-            ctx.beginPath();
+    ctx.fillStyle =
+        "red";
 
-            ctx.arc(
-                endPt[0],
-                endPt[1],
-                12,
-                0,
-                Math.PI * 2
-            );
-
-            ctx.fillStyle =
-                "red";
-
-            ctx.fill();
+    ctx.fill();
+}
 
             // =========================================
             // DEBUG
